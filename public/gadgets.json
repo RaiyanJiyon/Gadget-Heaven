@@ -1,0 +1,254 @@
+[
+    {
+        "product_id": "P001",
+        "product_title": "Apple iPhone 15 Pro Max",
+        "product_image": "./images/iPhone-15-Plus.webp",
+        "category": "Smartphones",
+        "price": 1299,
+        "description": "Experience the ultimate smartphone with the iPhone 15 Pro Max.",
+        "specification": [
+            "6.7-inch Super Retina XDR display",
+            "A17 Bionic chip",
+            "Triple-camera system (48MP Main, 12MP Telephoto, 12MP Ultrawide)",
+            "LiDAR Scanner",
+            "Up to 2TB storage"
+        ],
+        "availability": true,
+        "rating": 4.8
+    },
+    {
+        "product_id": "P002",
+        "product_title": "Samsung Galaxy S23 Ultra",
+        "product_image": "./images/Galaxy-S23-Ultra.webp",
+        "category": "Smartphones",
+        "price": 1199,
+        "description": "Samsung Galaxy S23 Ultra with high-end camera and storage options.",
+        "specification": [
+            "6.8-inch AMOLED display",
+            "Snapdragon 8 Gen 2",
+            "200MP Quad-camera setup",
+            "5000mAh battery",
+            "Up to 1TB storage"
+        ],
+        "availability": true,
+        "rating": 4.7
+    },
+    {
+        "product_id": "P003",
+        "product_title": "Google Pixel 8 Pro",
+        "product_image": "./images/Google-Pixel-8-Pro.webp",
+        "category": "Smartphones",
+        "price": 999,
+        "description": "Google Pixel 8 Pro with advanced AI camera features.",
+        "specification": [
+            "6.7-inch OLED display",
+            "Google Tensor G3",
+            "Triple-camera system (50MP Main, 12MP Ultra-wide, 48MP Telephoto)",
+            "Titan M2 security chip",
+            "Up to 512GB storage"
+        ],
+        "availability": true,
+        "rating": 4.6
+    },
+    {
+        "product_id": "P004",
+        "product_title": "Apple MacBook Pro 14",
+        "product_image": "./images/Apple-MacBook-Pro-14.webp",
+        "category": "Laptops",
+        "price": 1999,
+        "description": "Apple MacBook Pro 14 with M2 Pro chip for professionals.",
+        "specification": [
+            "14-inch Liquid Retina XDR display",
+            "Apple M2 Pro chip",
+            "16GB RAM",
+            "512GB SSD",
+            "Touch ID"
+        ],
+        "availability": true,
+        "rating": 4.9
+    },
+    {
+        "product_id": "P005",
+        "product_title": "Dell XPS 13",
+        "product_image": "./images/Dell-XPS-13.webp",
+        "category": "Laptops",
+        "price": 1299,
+        "description": "Dell XPS 13 with compact design and high performance.",
+        "specification": [
+            "13.4-inch FHD+ display",
+            "Intel Core i7-1360P",
+            "16GB RAM",
+            "512GB SSD",
+            "Fingerprint reader"
+        ],
+        "availability": true,
+        "rating": 4.8
+    },
+    {
+        "product_id": "P006",
+        "product_title": "Microsoft Surface Laptop 5",
+        "product_image": "./images/Microsoft-Surface-Laptop-5.webp",
+        "category": "Laptops",
+        "price": 1499,
+        "description": "Microsoft Surface Laptop 5 with touch screen and sleek design.",
+        "specification": [
+            "13.5-inch PixelSense display",
+            "Intel Core i5-1240P",
+            "8GB RAM",
+            "256GB SSD",
+            "Windows Hello"
+        ],
+        "availability": true,
+        "rating": 4.5
+    },
+    {
+        "product_id": "P007",
+        "product_title": "Apple iPad Pro 12.9",
+        "product_image": "./images/Apple-iPad-Pro-12.9.webp",
+        "category": "Tablets",
+        "price": 1099,
+        "description": "Apple iPad Pro with M2 chip for creative professionals.",
+        "specification": [
+            "12.9-inch Liquid Retina XDR display",
+            "Apple M2 chip",
+            "Face ID",
+            "Up to 2TB storage",
+            "ProMotion technology"
+        ],
+        "availability": true,
+        "rating": 4.7
+    },
+    {
+        "product_id": "P008",
+        "product_title": "Samsung Galaxy Tab S9 Ultra",
+        "product_image": "./images/Galaxy-Tab-S9-Ultra.webp",
+        "category": "Tablets",
+        "price": 999,
+        "description": "Samsung Galaxy Tab S9 Ultra with massive display and performance.",
+        "specification": [
+            "14.6-inch Super AMOLED display",
+            "Snapdragon 8 Gen 2",
+            "Dual-camera setup",
+            "10090mAh battery",
+            "Up to 1TB storage"
+        ],
+        "availability": true,
+        "rating": 4.6
+    },
+    {
+        "product_id": "P009",
+        "product_title": "Lenovo Tab P11 Pro",
+        "product_image": "./images/Lenovo-Tab-P11-Pro.webp",
+        "category": "Tablets",
+        "price": 599,
+        "description": "Lenovo Tab P11 Pro with OLED display for enhanced viewing experience.",
+        "specification": [
+            "11.5-inch OLED display",
+            "Qualcomm Snapdragon 730G",
+            "13MP rear camera",
+            "6GB RAM",
+            "128GB storage"
+        ],
+        "availability": true,
+        "rating": 4.3
+    },
+    {
+        "product_id": "P010",
+        "product_title": "Sony WH-1000XM5",
+        "product_image": "./images/Sony-WH-1000XM5.webp",
+        "category": "Headphones",
+        "price": 399,
+        "description": "Sony WH-1000XM5 with industry-leading noise cancellation.",
+        "specification": [
+            "30 hours of battery life",
+            "Quick charging",
+            "Adaptive Sound Control",
+            "High-resolution audio"
+        ],
+        "availability": true,
+        "rating": 4.9
+    },
+    {
+        "product_id": "P011",
+        "product_title": "Bose QuietComfort Earbuds II",
+        "product_image": "./images/Bose-QuietComfort-Earbuds-II.webp",
+        "category": "Headphones",
+        "price": 299,
+        "description": "Bose QuietComfort Earbuds II with immersive sound and comfortable fit.",
+        "specification": [
+            "Noise-cancelling technology",
+            "Up to 6 hours per charge",
+            "Sweat and weather-resistant",
+            "High-fidelity sound"
+        ],
+        "availability": true,
+        "rating": 4.7
+    },
+    {
+        "product_id": "P012",
+        "product_title": "Apple AirPods Max",
+        "product_image": "./images/Apple-AirPods-Max.webp",
+        "category": "Headphones",
+        "price": 549,
+        "description": "Apple AirPods Max with spatial audio and adaptive EQ.",
+        "specification": [
+            "Active Noise Cancellation",
+            "20 hours of listening time",
+            "Digital Crown control",
+            "High-fidelity sound"
+        ],
+        "availability": true,
+        "rating": 4.6
+    },
+    {
+        "product_id": "P013",
+        "product_title": "Apple Watch Series 9",
+        "product_image": "./images/Apple-Watch-Series-9.webp",
+        "category": "Wearables",
+        "price": 399,
+        "description": "Apple Watch Series 9 with enhanced health and fitness tracking.",
+        "specification": [
+            "Always-on Retina display",
+            "Heart rate monitoring",
+            "Blood oxygen sensor",
+            "ECG app",
+            "Fall detection"
+        ],
+        "availability": true,
+        "rating": 4.8
+    },
+    {
+        "product_id": "P014",
+        "product_title": "Fitbit Versa 4",
+        "product_image": "./images/Versa-4-Waterfall-Blue.webp",
+        "category": "Wearables",
+        "price": 229,
+        "description": "Fitbit Versa 4 with comprehensive fitness tracking features.",
+        "specification": [
+            "Daily readiness score",
+            "Built-in GPS",
+            "Active Zone Minutes",
+            "Sleep tracking",
+            "Water-resistant"
+        ],
+        "availability": true,
+        "rating": 4.5
+    },
+    {
+        "product_id": "P015",
+        "product_title": "Samsung Galaxy Watch 6",
+        "product_image": "./images/Apple-Watch-Series-9.webp",
+        "category": "Wearables",
+        "price": 279,
+        "description": "Samsung Galaxy Watch 6 with advanced health monitoring.",
+        "specification": [
+            "Advanced sleep coaching",
+            "Body composition analysis",
+            "Heart rate monitoring",
+            "GPS and LTE options",
+            "Water-resistant"
+        ],
+        "availability": true,
+        "rating": 4.7
+    }
+]
