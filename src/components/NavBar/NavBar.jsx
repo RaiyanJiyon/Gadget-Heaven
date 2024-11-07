@@ -5,7 +5,7 @@ import { CiHeart } from "react-icons/ci";
 
 const NavBar = () => {
     return (
-        <div className=" w-11/12 mx-auto navbar bg-base-100">
+        <div className="w-11/12 mx-auto navbar bg-base-100">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -25,9 +25,9 @@ const NavBar = () => {
                     <ul
                         tabIndex={0}
                         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-                    <NavLink to={"/"}>Home</NavLink>
-                    <NavLink to={"/statistics"}>Statistics</NavLink>
-                    <NavLink to={"/dashboard"}>Dashboard</NavLink>
+                        <NavLink to={"/"}>Home</NavLink>
+                        <NavLink to={"/statistics"}>Statistics</NavLink>
+                        <NavLink to={"/dashboard"}>Dashboard</NavLink>
                     </ul>
                 </div>
                 <a className="btn btn-ghost text-xl">Gadget Heaven</a>
@@ -41,13 +41,10 @@ const NavBar = () => {
             </div>
             <div className="navbar-end gap-4">
                 <div className='flex justify-center items-center cursor-pointer w-8 h-8 bg-white rounded-full border border-[#dfdfe1]'>
-
-            <IoCartOutline className='text-lg' />
+                    <IoCartOutline className='text-lg' />
                 </div>
                 <div className='flex justify-center items-center cursor-pointer w-8 h-8 bg-white rounded-full border border-[#dfdfe1]'>
-
-            <CiHeart className='text-lg' />
-            
+                    <CiHeart className='text-lg' />
                 </div>
             </div>
         </div>
