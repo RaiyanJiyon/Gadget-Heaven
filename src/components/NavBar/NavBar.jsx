@@ -8,7 +8,7 @@ const NavBar = () => {
     const isHome = location.pathname === "/";
 
     return (
-        <div className="w-11/12 mx-auto navbar mt-6">
+        <div className="w-11/12 2xl:w-3/4 mx-auto navbar mt-6">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">

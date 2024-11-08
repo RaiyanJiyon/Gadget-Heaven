@@ -24,7 +24,7 @@ const Wishlist = () => {
     }
 
     return (
-        <div className='w-11/12 mx-auto mt-8 space-y-6'>
+        <div className='w-11/12 2xl:w-4/5 mx-auto mt-12 space-y-6'>
             <h2 className='text-xl font-bold'>WishList</h2>
             {
                 wishList.map(wishList => (
