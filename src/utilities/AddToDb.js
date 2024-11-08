@@ -2,7 +2,7 @@ import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 /* Cart functionalities */
-const getToCart =  () => {
+const getToCart = () => {
     const storedCartStr = localStorage.getItem('cart-item');
     return storedCartStr ? JSON.parse(storedCartStr) : [];
 };
@@ -13,28 +13,28 @@ const addToCart = (id) => {
     if (storedList.includes(id)) {
         toast.error('Already in Carts', {
             position: "top-center",
-            autoClose: 3000,
+            autoClose: 2000,
             hideProgressBar: false,
             closeOnClick: true,
             pauseOnHover: true,
             draggable: true,
             progress: undefined,
             theme: "light",
-            });
+        });
         return;
     }
 
     storedList.push(id);
     toast.success('Added in Cart', {
         position: "top-center",
-        autoClose: 3000,
+        autoClose: 2000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
         draggable: true,
         progress: undefined,
         theme: "light",
-        });
+    });
 
     localStorage.setItem('cart-item', JSON.stringify(storedList));
 };
@@ -44,9 +44,32 @@ const removeToCart = (id) => {
 
     if (cartList.includes(id)) {
         const updatedCartList = cartList.filter(cartId => cartId !== id);
-        localStorage.removeItem('cart-item', JSON.stringify(updatedCartList));
+        localStorage.setItem('cart-item', JSON.stringify(updatedCartList));
+
+        toast.success('Removed from Cart', {
+            position: "top-center",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+        });
+    } else {
+        toast.error('Item not found in Cart', {
+            position: "top-center",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+        });
     }
-} 
+};
+
 
 /* Wishlist functionalities */
 const getToWishList = () => {
@@ -61,7 +84,7 @@ const addToWishList = (id) => {
     if (storedCartList.includes(id)) {
         toast.warn('This Product is already in your cart list, so it cannot be added to the Wishlist.', {
             position: "top-center",
-            autoClose: 3000,
+            autoClose: 2000,
             hideProgressBar: false,
             closeOnClick: true,
             pauseOnHover: true,
@@ -75,14 +98,14 @@ const addToWishList = (id) => {
     if (storedList.includes(id)) {
         toast.error('Already in Wishlist', {
             position: "top-center",
-            autoClose: 3000,
+            autoClose: 2000,
             hideProgressBar: false,
             closeOnClick: true,
             pauseOnHover: true,
             draggable: true,
             progress: undefined,
             theme: "light",
-            });
+        });
         return;
     }
 
@@ -90,15 +113,15 @@ const addToWishList = (id) => {
 
     toast.success('Added in Wishlist', {
         position: "top-center",
-        autoClose: 3000,
+        autoClose: 2000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
         draggable: true,
         progress: undefined,
         theme: "light",
-        });
-    
+    });
+
     localStorage.setItem('list-item', JSON.stringify(storedList));
 };
 
@@ -107,8 +130,31 @@ const removeToWishList = (id) => {
 
     if (removeList.includes(id)) {
         const updatedWishList = removeList.filter(listId => listId !== id);
-        localStorage.removeItem('list-item', JSON.stringify(updatedWishList));
+        localStorage.setItem('list-item', JSON.stringify(updatedWishList));
+
+        toast.success('Removed from Wishlist', {
+            position: "top-center",
+            autoClose: 2000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+        });
+    } else {
+        toast.error('Item not found in Wishlist', {
+            position: "top-center",
+            autoClose: 2000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+        });
     }
 }
 
-export {addToCart, addToWishList, getToCart, getToWishList, removeToCart, removeToWishList}
+
+export { addToCart, addToWishList, getToCart, getToWishList, removeToCart, removeToWishList }

@@ -74,8 +74,8 @@ const ProductDetails = () => {
                         <button onClick={() => handleAddToCart(id)} className='flex items-center btn bg-[#9538E2] text-white text-sm font-medium rounded-[32px]'>
                         Add To Card <BsCart3 />
                         </button>
-                        <div onClick={() => handleAddToWishList(id)} className='flex justify-center items-center cursor-pointer w-8 h-8 bg-white rounded-full border border-[#dfdfe1]'>
-                    <CiHeart className='text-lg' />
+                        <div onClick={() => handleAddToWishList(id)} className='flex justify-center items-center cursor-pointer w-12 h-12 bg-white rounded-full border border-[#dfdfe1]'>
+                    <CiHeart className='text-3xl' />
                 </div>
                     </div>
                 </div>
