@@ -1,11 +1,14 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 import { IoCartOutline } from "react-icons/io5";
 import { CiHeart } from "react-icons/ci";
 
 const NavBar = () => {
+    const location = useLocation();
+    const isHome = location.pathname === "/";
+
     return (
-        <div className="w-11/12 mx-auto navbar bg-base-100">
+        <div className="w-11/12 mx-auto navbar mt-6">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -25,18 +28,19 @@ const NavBar = () => {
                     <ul
                         tabIndex={0}
                         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-                        <NavLink to={"/"} className={ ({isActive}) => isActive ? 'text-[#9538E2]' : 'text-black' }>Home</NavLink>
-                        <NavLink to={"/statistics"} className={ ({isActive}) => isActive ? 'text-[#9538E2]' : 'text-black' }>Statistics</NavLink>
-                        <NavLink to={"/dashboard"} className={ ({isActive}) => isActive ? 'text-[#9538E2]' : 'text-black' }>Dashboard</NavLink>
+                        <NavLink to={"/"} className={ ({isActive}) => isActive ? 'text-[#9538E2]' : (isHome ? 'text-white' : 'text-black') }>Home</NavLink>
+                        <NavLink to={"/statistics"} className={ ({isActive}) => isActive ? 'text-[#9538E2]' : (isHome ? 'text-white' : 'text-black') }>Statistics</NavLink>
+                        <NavLink to={"/dashboard"} className={ ({isActive}) => isActive ? 'text-[#9538E2]' : (isHome ? 'text-white' : 'text-black') }>Dashboard</NavLink>
                     </ul>
                 </div>
-                <a className="btn btn-ghost text-xl">Gadget Heaven</a>
+                <NavLink to={"/"} className={ (isHome) ? 'text-white btn btn-ghost text-xl' : 
+                    'btn btn-ghost text-xl' }>Gadget Heaven</NavLink>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1 gap-12">
-                    <NavLink to={"/"} className={ ({isActive}) => isActive ? 'text-[#9538E2]' : 'text-black' }>Home</NavLink>
-                    <NavLink to={"/statistics"} className={ ({isActive}) => isActive ? 'text-[#9538E2]' : 'text-black' }>Statistics</NavLink>
-                    <NavLink to={"/dashboard"} className={ ({isActive}) => isActive ? 'text-[#9538E2]' : 'text-black' }>Dashboard</NavLink>
+                    <NavLink to={"/"} className={ ({isActive}) => isActive ? 'text-white underline underline-offset-4' : (isHome ? 'text-white' : 'text-black') }>Home</NavLink>
+                    <NavLink to={"/statistics"} className={ ({isActive}) => isActive ? 'text-[#9538E2] underline underline-offset-4' : (isHome ? 'text-white' : 'text-black') }>Statistics</NavLink>
+                    <NavLink to={"/dashboard"} className={ ({isActive}) => isActive ? 'text-[#9538E2] underline underline-offset-4' : (isHome ? 'text-white' : 'text-black') }>Dashboard</NavLink>
                 </ul>
             </div>
             <div className="navbar-end gap-4">
