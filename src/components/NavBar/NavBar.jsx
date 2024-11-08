@@ -25,18 +25,18 @@ const NavBar = () => {
                     <ul
                         tabIndex={0}
                         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-                        <NavLink to={"/"}>Home</NavLink>
-                        <NavLink to={"/statistics"}>Statistics</NavLink>
-                        <NavLink to={"/dashboard"}>Dashboard</NavLink>
+                        <NavLink to={"/"} className={ ({isActive}) => isActive ? 'text-[#9538E2]' : 'text-black' }>Home</NavLink>
+                        <NavLink to={"/statistics"} className={ ({isActive}) => isActive ? 'text-[#9538E2]' : 'text-black' }>Statistics</NavLink>
+                        <NavLink to={"/dashboard"} className={ ({isActive}) => isActive ? 'text-[#9538E2]' : 'text-black' }>Dashboard</NavLink>
                     </ul>
                 </div>
                 <a className="btn btn-ghost text-xl">Gadget Heaven</a>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1 gap-12">
-                    <NavLink to={"/"}>Home</NavLink>
-                    <NavLink to={"/statistics"}>Statistics</NavLink>
-                    <NavLink to={"/dashboard"}>Dashboard</NavLink>
+                    <NavLink to={"/"} className={ ({isActive}) => isActive ? 'text-[#9538E2]' : 'text-black' }>Home</NavLink>
+                    <NavLink to={"/statistics"} className={ ({isActive}) => isActive ? 'text-[#9538E2]' : 'text-black' }>Statistics</NavLink>
+                    <NavLink to={"/dashboard"} className={ ({isActive}) => isActive ? 'text-[#9538E2]' : 'text-black' }>Dashboard</NavLink>
                 </ul>
             </div>
             <div className="navbar-end gap-4">

@@ -1,10 +1,10 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 const Gadget = ({ gadget }) => {
-    console.log(gadget)
     const {product_id, product_title, product_image, price} = gadget;
     return (
-        <div className="card bg-base-100 shadow-xl">
+        <div className="card bg-base-100 shadow-lg">
             <figure className="px-4 pt-4">
                 <img
                     src={product_image}
@@ -15,7 +15,9 @@ const Gadget = ({ gadget }) => {
                 <h2 className="card-title w-full">{product_title}</h2>
                 <p className='text-[#09080F99] w-full'>{`Price: ${price}k`}</p>
                 <div className="card-actions w-full mt-4">
+                    <NavLink to={`/product/:${product_id}`} >
                     <button className="btn btn-outline text-[#9538E2] border border-[#9538E2] rounded-[32px]">View Details</button>
+                    </NavLink>
                 </div>
             </div>
         </div>

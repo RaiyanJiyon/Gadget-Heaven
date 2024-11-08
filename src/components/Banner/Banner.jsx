@@ -4,7 +4,7 @@ import bannerImg from "../../assets/banner.jpg"
 const Banner = () => {
     return (
         <div>
-            <div className='w-11/12 mx-auto border border-[#F6F6F6] p-2 rounded-[32px]'>
+            <div className='w-11/12 mx-auto border-2 border-[#F6F6F6] p-2 rounded-[32px]'>
                 <div className=" hero bg-[#9538E2]  rounded-[32px] pb-40">
                     <div className="hero-content text-center mt-10 rounded-[32px]">
                         <div className="w-4/5">

@@ -4,7 +4,7 @@ import Gadgets from '../components/Gadgets/Gadgets';
 
 const Home = () => {
     return (
-        <div>
+        <div className='bg-[#f7f7f7]'>
             <Banner />
             <Gadgets />
         </div>
