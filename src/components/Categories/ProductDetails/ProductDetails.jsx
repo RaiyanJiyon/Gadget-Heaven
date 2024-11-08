@@ -8,7 +8,7 @@ import { addToCart, addToWishList } from '../../../utilities/AddToDb';
 const ProductDetails = () => {
 
     useEffect(() => {
-        window.scrollTo(0, 0);
+        window.scrollTo(0, 100);
     }, [])
 
     const productData = useLoaderData();

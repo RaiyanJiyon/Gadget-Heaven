@@ -1,6 +1,7 @@
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
+/* Cart functionalities */
 const getToCart =  () => {
     const storedCartStr = localStorage.getItem('cart-item');
     return storedCartStr ? JSON.parse(storedCartStr) : [];
@@ -38,6 +39,16 @@ const addToCart = (id) => {
     localStorage.setItem('cart-item', JSON.stringify(storedList));
 };
 
+const removeToCart = (id) => {
+    const cartList = getToCart();
+
+    if (cartList.includes(id)) {
+        const updatedCartList = cartList.filter(cartId => cartId !== id);
+        localStorage.removeItem('cart-item', JSON.stringify(updatedCartList));
+    }
+} 
+
+/* Wishlist functionalities */
 const getToWishList = () => {
     const storedWishListStr = localStorage.getItem('list-item');
     return storedWishListStr ? JSON.parse(storedWishListStr) : [];
@@ -91,4 +102,4 @@ const addToWishList = (id) => {
     localStorage.setItem('list-item', JSON.stringify(storedList));
 };
 
-export {addToCart, addToWishList, getToCart, getToWishList}
+export {addToCart, addToWishList, getToCart, getToWishList, removeToCart}
