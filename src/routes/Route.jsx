@@ -1,5 +1,5 @@
 import React from 'react';
-import { createBrowserRouter } from 'react-router-dom';
+import { createBrowserRouter, Navigate } from 'react-router-dom';
 import MainLayout from '../layout/MainLayout';
 import Home from '../pages/Home';
 import Statistics from '../pages/Statistics';
@@ -38,6 +38,10 @@ const router = createBrowserRouter([
                 path: "/dashboard",
                 element: <Dashboard />,
                 children: [
+                    {
+                        path: "/dashboard", 
+                        element: <Navigate to="/dashboard/cart" replace />
+                    },
                     {
                         path: "/dashboard/cart",
                         element: <Cart />,
