@@ -4,8 +4,8 @@ import { NavLink } from 'react-router-dom';
 
 const Banner = () => {
     return (
-        <div>
-            <div className='w-[98%] mx-auto -mt-20 border-2 border-[#F6F6F6] p-2 rounded-[32px]'>
+        <div className='pt-1'>
+            <div className='w-[98%] mx-auto -mt-20 border-2 border-[#f1edf5] p-2 rounded-[32px]'>
                 <div className=" hero bg-[#9538E2]  rounded-[32px] pb-40">
                     <div className="hero-content text-center mt-20 rounded-[32px]">
                         <div className="w-4/5">
