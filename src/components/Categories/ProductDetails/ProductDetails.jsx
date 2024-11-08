@@ -16,12 +16,10 @@ const ProductDetails = () => {
     const { product_id } = useParams();
 
     const productDetail = productData.find(product => product.product_id === product_id);
-    console.log(productDetail);
 
     const { product_id: id, product_title, product_image, category, price, description, specification, availability, rating } = productDetail;
 
     const handleAddToCart = () => {
-        console.log("handleAddToCart", id);
         addToCart(id);
     }
 

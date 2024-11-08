@@ -25,6 +25,7 @@ const Wishlist = () => {
 
     return (
         <div className='w-11/12 mx-auto mt-8 space-y-6'>
+            <h2 className='text-xl font-bold'>WishList</h2>
             {
                 wishList.map(wishList => (
                     <div key={wishList.product_id} className='flex justify-between items-center gap-4 bg-white rounded-2xl'>

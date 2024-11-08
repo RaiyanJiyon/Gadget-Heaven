@@ -2,10 +2,12 @@ import React, { useEffect, useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import { getToCart, removeToCart } from '../../utilities/AddToDb';
 import { TiDeleteOutline } from "react-icons/ti";
+import Modal from '../Modal/Modal';
 
 const Cart = () => {
-    const [cartList, setCartList] = useState([])
+    const [cartList, setCartList] = useState([]);
     const [totalCost, setTotalCost] = useState(0);
+    const [isModalOpen, setIsModalOpen] = useState(false);
 
     const allCart = useLoaderData();
 
@@ -14,35 +16,51 @@ const Cart = () => {
 
         const filterCartList = allCart.filter(cart => (
             storedCart.includes(cart.product_id)
-        ))
+        ));
 
         setCartList(filterCartList);
 
-        const total = filterCartList.reduce((acc, cartItem) => acc + cartItem.price, 0)
-        setTotalCost(total)
+        const total = filterCartList.reduce((acc, cartItem) => acc + cartItem.price, 0);
+        setTotalCost(total);
 
-    }, [allCart])
+    }, [allCart]);
 
-    const handleSortByPrice = (cartList) => {
-        console.log(cartList)
+    const handleSortByPrice = () => {
         const sortedCart = [...cartList].sort((a, b) => b.price - a.price);
         setCartList(sortedCart);
-    }
+    };
+
+    const handlePurchaseProduct = () => {
+        setTotalCost(0);
+        const total = cartList.reduce((acc, cartItem) => acc + cartItem.price, 0);
+        setTotalCost(total);
+
+        setCartList([]);
+        localStorage.removeItem('cart-item');
+
+        setIsModalOpen(true);
+    };
 
     const handleRemoveToCart = (product_id) => {
         removeToCart(product_id);
-        setCartList(cartList.filter(cartItem => cartItem.product_id !== product_id))
-    }
+        const updatedCartList = cartList.filter(cartItem => cartItem.product_id !== product_id);
+        setCartList(updatedCartList);
+
+        const newTotal = updatedCartList.reduce((acc, cartItem) => acc + cartItem.price, 0);
+        setTotalCost(newTotal);
+    };
 
     return (
         <div className='w-11/12 mx-auto mt-12'>
             <div className='flex justify-between items-center'>
                 <h2 className='text-xl font-bold'>Cart</h2>
                 <div className='flex justify-center items-center gap-4'>
-
                     <h2 className='text-xl font-bold'>Total cost: {totalCost}</h2>
-                    <button onClick={() => handleSortByPrice(cartList)} className='btn btn-outline text-[#9538E2] font-semibold border border-[#9538E2] rounded-[32px]'>Sort by Price</button>
-                    <button onClick={() => handlePurchaseProduct()} className='btn bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold border-none rounded-[32px]'>Purchase</button>
+                    <button onClick={handleSortByPrice} className='btn btn-outline text-[#9538E2] font-semibold border border-[#9538E2] rounded-[32px]'>Sort by Price</button>
+                    <div>
+                        <button onClick={handlePurchaseProduct} className='btn bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold border-none rounded-[32px]'>Purchase</button>
+                        <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} totalCost={totalCost} />
+                    </div>
                 </div>
             </div>
 
