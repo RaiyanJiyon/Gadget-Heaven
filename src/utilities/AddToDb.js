@@ -102,4 +102,13 @@ const addToWishList = (id) => {
     localStorage.setItem('list-item', JSON.stringify(storedList));
 };
 
-export {addToCart, addToWishList, getToCart, getToWishList, removeToCart}
+const removeToWishList = (id) => {
+    const removeList = getToWishList();
+
+    if (removeList.includes(id)) {
+        const updatedWishList = removeList.filter(listId => listId !== id);
+        localStorage.removeItem('list-item', JSON.stringify(updatedWishList));
+    }
+}
+
+export {addToCart, addToWishList, getToCart, getToWishList, removeToCart, removeToWishList}

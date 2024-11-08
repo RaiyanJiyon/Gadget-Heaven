@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
-import { getToWishList } from '../../utilities/AddToDb';
+import { getToWishList, removeToWishList } from '../../utilities/AddToDb';
 import { TiDeleteOutline } from 'react-icons/ti';
 
 const Wishlist = () => {
@@ -16,21 +16,25 @@ const Wishlist = () => {
 
         setWishList(filterStoredWishList);
 
-    }, [allWishList])
+    }, [allWishList]);
 
+    const handleRemoveWishList = (product_id) => {
+        removeToWishList(product_id);
+        setWishList(wishList.filter(wishItem => wishItem.product_id !== product_id));
+    }
 
     return (
         <div className='w-11/12 mx-auto mt-8 space-y-6'>
             {
                 wishList.map(wishList => (
-                    <div className='flex justify-between items-center gap-4 bg-white rounded-2xl'>
+                    <div key={wishList.product_id} className='flex justify-between items-center gap-4 bg-white rounded-2xl'>
                         <div className='w-1/5'>
                             <img className='w-48' src={wishList.product_image} alt={`${wishList.product_image} image`} />
                         </div>
                         <div className='w-4/5'>
                             <div className='flex justify-between text-xl font-bold'>
                                 {wishList.product_title}
-                                <TiDeleteOutline className='text-red-400 text-3xl mr-16 cursor-pointer' />
+                                <TiDeleteOutline onClick={() => handleRemoveWishList(wishList.product_id)} className='text-red-400 text-3xl mr-16 cursor-pointer' />
                             </div>
                             <p className='text-sm text-[#09080F99]'>{wishList.description}</p>
                             <h4 className='font-bold'>{`Price: $${wishList.price}`}</h4>
