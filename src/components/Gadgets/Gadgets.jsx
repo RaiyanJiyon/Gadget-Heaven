@@ -5,9 +5,6 @@ import Sidebar from '../Sidebar/Sidebar';
 
 const Gadgets = () => {
     const gadgetsData = useLoaderData();
-    // console.log(gadgetsData)
-    const { category } = useParams();
-    console.log(category);
 
     return (
         <div className='w-11/12 mx-auto mt-20 pb-20'>

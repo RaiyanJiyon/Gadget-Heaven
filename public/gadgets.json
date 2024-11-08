@@ -2,7 +2,7 @@
     {
         "product_id": "1",
         "product_title": "Apple iPhone 15 Pro Max",
-        "product_image": "./images/iPhone-15-Plus.webp",
+        "product_image": "https://brotherselectronicsbd.com/image/cache/catalog/demo/product/Apple/iphone%2015/15%20pro/iPhone-15-Plus-(2)-(6)-5363-800x800.jpg",
         "category": "Smartphones",
         "price": 1299,
         "description": "Experience the ultimate smartphone with the iPhone 15 Pro Max.",
@@ -19,7 +19,7 @@
     {
         "product_id": "2",
         "product_title": "Samsung Galaxy S23 Ultra",
-        "product_image": "./images/Galaxy-S23-Ultra.webp",
+        "product_image": "https://adminapi.applegadgetsbd.com/storage/media/large/Galaxy-S23-Ultra-Phantom-Black-2756.jpg",
         "category": "Smartphones",
         "price": 1199,
         "description": "Samsung Galaxy S23 Ultra with high-end camera and storage options.",
@@ -36,7 +36,7 @@
     {
         "product_id": "3",
         "product_title": "Google Pixel 8 Pro",
-        "product_image": "./images/Google-Pixel-8-Pro.webp",
+        "product_image": "https://mobilebuzzbd.com/wp-content/uploads/2023/12/Pixel-8-Pro.jpg",
         "category": "Smartphones",
         "price": 999,
         "description": "Google Pixel 8 Pro with advanced AI camera features.",
@@ -53,7 +53,7 @@
     {
         "product_id": "4",
         "product_title": "Apple MacBook Pro 14",
-        "product_image": "./images/Apple-MacBook-Pro-14.webp",
+        "product_image": "https://computermania-bd.b-cdn.net/wp-content/uploads/Macbook-Pro-M1-Chip-3.png",
         "category": "Laptops",
         "price": 1999,
         "description": "Apple MacBook Pro 14 with M2 Pro chip for professionals.",
@@ -70,7 +70,7 @@
     {
         "product_id": "5",
         "product_title": "Dell XPS 13",
-        "product_image": "./images/Dell-XPS-13.webp",
+        "product_image": "https://computermania-bd.b-cdn.net/wp-content/uploads/Dell-XPS-13-Plus-BD-Price-1.jpg",
         "category": "Laptops",
         "price": 1299,
         "description": "Dell XPS 13 with compact design and high performance.",
@@ -87,7 +87,7 @@
     {
         "product_id": "6",
         "product_title": "Microsoft Surface Laptop 5",
-        "product_image": "./images/Microsoft-Surface-Laptop-5.webp",
+        "product_image": "https://computermania-bd.b-cdn.net/wp-content/uploads/Microsoft-Surface-Laptop-5-Ultrabook-Price-in-BD-3.jpg",
         "category": "Laptops",
         "price": 1499,
         "description": "Microsoft Surface Laptop 5 with touch screen and sleek design.",
@@ -104,7 +104,7 @@
     {
         "product_id": "7",
         "product_title": "Apple iPad Pro 12.9",
-        "product_image": "./images/Apple-iPad-Pro-12.9.webp",
+        "product_image": "https://assets.gadgetandgear.com/upload/product/20221118_1668765211_897604.jpeg",
         "category": "Tablets",
         "price": 1099,
         "description": "Apple iPad Pro with M2 chip for creative professionals.",
@@ -121,7 +121,7 @@
     {
         "product_id": "8",
         "product_title": "Samsung Galaxy Tab S9 Ultra",
-        "product_image": "./images/Galaxy-Tab-S9-Ultra.webp",
+        "product_image": "https://adminapi.applegadgetsbd.com/storage/media/large/Galaxy-Tab-S9-Ultra-Beige-8012.jpg",
         "category": "Tablets",
         "price": 999,
         "description": "Samsung Galaxy Tab S9 Ultra with massive display and performance.",
@@ -138,7 +138,7 @@
     {
         "product_id": "9",
         "product_title": "Lenovo Tab P11 Pro",
-        "product_image": "./images/Lenovo-Tab-P11-Pro.webp",
+        "product_image": "https://m.media-amazon.com/images/I/51QRtIPG9NL.jpg",
         "category": "Tablets",
         "price": 599,
         "description": "Lenovo Tab P11 Pro with OLED display for enhanced viewing experience.",
@@ -155,7 +155,7 @@
     {
         "product_id": "10",
         "product_title": "Sony WH-1000XM5",
-        "product_image": "./images/Sony-WH-1000XM5.webp",
+        "product_image": "https://adminapi.applegadgetsbd.com/storage/media/large/5318-55349.jpg",
         "category": "Headphones",
         "price": 399,
         "description": "Sony WH-1000XM5 with industry-leading noise cancellation.",
@@ -171,7 +171,7 @@
     {
         "product_id": "11",
         "product_title": "Bose QuietComfort Earbuds II",
-        "product_image": "./images/Bose-QuietComfort-Earbuds-II.webp",
+        "product_image": "https://skr.mu/wp-content/uploads/2023/01/1_0090_BOSE-QC-EARBUDS-II-BLACK-1.jpg",
         "category": "Headphones",
         "price": 299,
         "description": "Bose QuietComfort Earbuds II with immersive sound and comfortable fit.",
@@ -187,7 +187,7 @@
     {
         "product_id": "12",
         "product_title": "Apple AirPods Max",
-        "product_image": "./images/Apple-AirPods-Max.webp",
+        "product_image": "https://assets.gadgetandgear.com/upload/product/20210121_1611206354_632901.jpeg",
         "category": "Headphones",
         "price": 549,
         "description": "Apple AirPods Max with spatial audio and adaptive EQ.",
@@ -203,7 +203,7 @@
     {
         "product_id": "13",
         "product_title": "Apple Watch Series 9",
-        "product_image": "./images/Apple-Watch-Series-9.webp",
+        "product_image": "https://adminapi.applegadgetsbd.com/storage/media/large/Apple-Watch-Series-9-(3)-6716.jpg",
         "category": "Wearables",
         "price": 399,
         "description": "Apple Watch Series 9 with enhanced health and fitness tracking.",
@@ -220,7 +220,7 @@
     {
         "product_id": "14",
         "product_title": "Fitbit Versa 4",
-        "product_image": "./images/Versa-4-Waterfall-Blue.webp",
+        "product_image": "https://adminapi.applegadgetsbd.com/storage/media/large/Versa-4-Waterfall-Blue-1319.jpg",
         "category": "Wearables",
         "price": 229,
         "description": "Fitbit Versa 4 with comprehensive fitness tracking features.",
@@ -237,7 +237,7 @@
     {
         "product_id": "15",
         "product_title": "Samsung Galaxy Watch 6",
-        "product_image": "./images/Galaxy-Watch-6.webp",
+        "product_image": "https://adminapi.applegadgetsbd.com/storage/media/large/Galaxy-Watch6-Gold-5232.jpg",
         "category": "Wearables",
         "price": 279,
         "description": "Samsung Galaxy Watch 6 with advanced health monitoring.",
