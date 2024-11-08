@@ -8,7 +8,6 @@ const Cart = () => {
     const [totalCost, setTotalCost] = useState(0);
 
     const allCart = useLoaderData();
-    console.log(allCart)
 
     useEffect(() => {
         const storedCart = getToCart();
@@ -24,9 +23,11 @@ const Cart = () => {
 
     }, [allCart])
 
-    console.log(cartList);
-
-
+    const handleSortByPrice = (cartList) => {
+        console.log(cartList)
+        const sortedCart = [...cartList].sort((a, b) => b.price - a.price);
+        setCartList(sortedCart);
+    }
 
     return (
         <div className='w-11/12 mx-auto mt-12'>
@@ -34,27 +35,26 @@ const Cart = () => {
                 <h2 className='text-xl font-bold'>Cart</h2>
                 <div className='flex justify-center items-center gap-4'>
 
-                <h2 className='text-xl font-bold'>Total cost: {totalCost}</h2>
-                <button className='btn btn-outline text-[#9538E2] font-semibold border border-[#9538E2] rounded-[32px]'>Sort by Price</button>
-                <button className='btn bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold border-none rounded-[32px]'>Purchase</button>
+                    <h2 className='text-xl font-bold'>Total cost: {totalCost}</h2>
+                    <button onClick={() => handleSortByPrice(cartList)} className='btn btn-outline text-[#9538E2] font-semibold border border-[#9538E2] rounded-[32px]'>Sort by Price</button>
+                    <button className='btn bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold border-none rounded-[32px]'>Purchase</button>
                 </div>
             </div>
 
             <div className='mt-8 space-y-6'>
                 {
                     cartList.map(cart => (
-                        <div className='flex justify-between items-center gap-4 bg-white rounded-2xl'>
+                        <div key={cart.product_id} className='flex justify-between items-center gap-4 bg-white rounded-2xl'>
                             <div className='w-1/5'>
-                            <img className='w-48' src={cart.product_image} alt={`${cart.product_image} image`} />
+                                <img className='w-48' src={cart.product_image} alt={`${cart.product_image} image`} />
                             </div>
                             <div className='w-4/5'>
-                            <div className='flex justify-between text-xl font-bold'>
-                                {cart.product_title}
-                                <TiDeleteOutline className='text-red-400 text-3xl mr-16 cursor-pointer' />
+                                <div className='flex justify-between text-xl font-bold'>
+                                    {cart.product_title}
+                                    <TiDeleteOutline className='text-red-400 text-3xl mr-16 cursor-pointer' />
                                 </div>
-                            <p className='text-sm text-[#09080F99]'>{cart.description}</p>
-                            <h4 className='font-bold'>{`Price: $${cart.price}`}</h4>
-
+                                <p className='text-sm text-[#09080F99]'>{cart.description}</p>
+                                <h4 className='font-bold'>{`Price: $${cart.price}`}</h4>
                             </div>
                         </div>
                     ))
