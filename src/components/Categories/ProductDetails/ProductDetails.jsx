@@ -3,6 +3,7 @@ import { useLoaderData, useParams } from 'react-router-dom';
 import ReactStars from "react-rating-stars-component";
 import { BsCart3 } from "react-icons/bs";
 import { CiHeart } from "react-icons/ci";
+import { addToCart, addToWishList } from '../../../utilities/AddToDb';
 
 const ProductDetails = () => {
 
@@ -19,6 +20,16 @@ const ProductDetails = () => {
 
     const { product_id: id, product_title, product_image, category, price, description, specification, availability, rating } = productDetail;
 
+    const handleAddToCart = () => {
+        console.log("handleAddToCart", id);
+        addToCart(id);
+    }
+
+    const handleAddToWishList = () => {
+        console.log("handleAddToWishList", id);
+        addToWishList(id);
+    }
+
 
     return (
         <div className='bg-[#f7f7f7] pb-24'>
@@ -30,7 +41,7 @@ const ProductDetails = () => {
 
             {/* details div */}
             <div className="w-11/12 mx-auto flex justify-center items-center hero bg-white rounded-3xl -mt-32 p-8">
-                <div className='space-y-4 basis-[70%] bg-[#ECECEC] w-2/5 h-full'>
+                <div className='space-y-4 basis-[70%] w-2/5 h-full'>
                     <img className='' src={product_image} alt={`${product_image} image`} />
                 </div>
                 <div className='space-y-3 basis-[70%] w-3/5'>
@@ -41,8 +52,8 @@ const ProductDetails = () => {
                     <p className='font-bold'>Specification:</p>
                     <ul className='pl-4'>
                         {
-                            specification.map(specification => (
-                                <li className='text-[#09080F99] list-decimal'>{specification}</li>
+                            specification.map((specification, idx) => (
+                                <li key={idx} className='text-[#09080F99] list-decimal'>{specification}</li>
                             ))
                         }
                     </ul>
@@ -60,10 +71,10 @@ const ProductDetails = () => {
                     </div>
 
                     <div className='flex items-center gap-4 pb-8'>
-                        <button className='flex items-center btn bg-[#9538E2] text-white text-sm font-medium rounded-[32px]'>
+                        <button onClick={() => handleAddToCart(id)} className='flex items-center btn bg-[#9538E2] text-white text-sm font-medium rounded-[32px]'>
                         Add To Card <BsCart3 />
                         </button>
-                        <div className='flex justify-center items-center cursor-pointer w-8 h-8 bg-white rounded-full border border-[#dfdfe1]'>
+                        <div onClick={() => handleAddToWishList(id)} className='flex justify-center items-center cursor-pointer w-8 h-8 bg-white rounded-full border border-[#dfdfe1]'>
                     <CiHeart className='text-lg' />
                 </div>
                     </div>

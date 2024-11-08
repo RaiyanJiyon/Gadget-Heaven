@@ -11,6 +11,8 @@ import Watches from '../components/Categories/Watches/Watches';
 import MacBook from '../components/Categories/MacBook/MacBook';
 import Iphone from '../components/Categories/Iphone/Iphone';
 import ProductDetails from '../components/Categories/ProductDetails/ProductDetails';
+import Cart from '../components/Cart/Cart';
+import Wishlist from '../components/Wishlist/Wishlist';
 
 const router = createBrowserRouter([
     {
@@ -34,7 +36,18 @@ const router = createBrowserRouter([
             },
             {
                 path: "/dashboard",
-                element: <Dashboard />
+                element: <Dashboard />,
+                children: [
+                    {
+                        path: "/dashboard/cart",
+                        element: <Cart />,
+                        loader: () => fetch('/gadgets.json'),
+                    },
+                    {
+                        path: "/dashboard/wishlist",
+                        element: <Wishlist />
+                    },
+                ]
             },
         ]
     },
