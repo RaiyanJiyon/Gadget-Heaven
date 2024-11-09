@@ -39,11 +39,11 @@ const ProductDetails = () => {
             </div>
 
             {/* details div */}
-            <div className="w-11/12 mx-auto flex justify-center items-center hero bg-white rounded-3xl -mt-32 p-8">
-                <div className='space-y-4 basis-[70%] w-2/5 h-full'>
+            <div className="w-11/12 mx-auto flex flex-col md:flex-row justify-center items-center hero bg-white rounded-3xl -mt-32 p-8">
+                <div className='space-y-4 basis-[70%] md:w-2/5 h-full'>
                     <img src={`/images/${product_image.split('/').pop()}`} alt={`${product_image} image`} />
                 </div>
-                <div className='space-y-3 basis-[70%] w-3/5'>
+                <div className='space-y-3 basis-[70%] md:w-3/5'>
                     <h2 className='text-2xl font-bold'>{product_title}</h2>
                     <h3 className='text-lg font-semibold text-[#09080FCC]'>Price: ${price}</h3>
                     <button className="btn btn-sm btn-outline bg-[#309C081A] text-[#309C08] text-sm font-medium rounded-[32px]">{availability === true ? "In Stock" : "Out Of Stock"}</button>
