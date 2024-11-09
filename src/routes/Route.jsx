@@ -15,11 +15,12 @@ import Cart from '../components/Cart/Cart';
 import Wishlist from '../components/Wishlist/Wishlist';
 import Sidebar from '../components/Sidebar/Sidebar';
 import Gadgets from '../components/Gadgets/Gadgets';
+import ErrorPage from '../components/ErrorPage/ErrorPage';
 
 const router = createBrowserRouter([
     {
         path: "/",
-        // errorElement: <ErrorPage />,
+        errorElement: <ErrorPage />,
         element: <MainLayout />,
         children: [
             {
