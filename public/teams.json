@@ -1,31 +1,31 @@
 [
     {
         "id": 1,
-        "image": "./teamsImages/alicejohnson.webp",
+        "image": "teamsImages/alicejohnson.webp",
         "name": "Alice Johnson",
         "role": "CEO"
     },
     {
         "id": 2,
-        "image": "./teamsImages/michaelsmith.webp",
+        "image": "teamsImages/michaelsmith.webp",
         "name": "Michael Smith",
         "role": "Head of Marketing"
     },
     {
         "id": 3,
-        "image": "./teamsImages/emilydavis.webp",
+        "image": "teamsImages/emilydavis.webp",
         "name": "Emily Davis",
         "role": "Product Manager"
     },
     {
         "id": 4,
-        "image": "./teamsImages/davidwilson.webp",
+        "image": "teamsImages/davidwilson.webp",
         "name": "David Wilson",
         "role": "Lead Developer"
     },
     {
         "id": 5,
-        "image": "./teamsImages/johnjones.webp",
+        "image": "teamsImages/johnjones.webp",
         "name": "John Jones",
         "role": "Customer Support Specialist"
     }
