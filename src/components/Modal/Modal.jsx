@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import modalImg from "../../assets/Group.png";
-import { Navigate, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const Modal = ({ isOpen, onClose, totalCost }) => {
     const modalRef = useRef();

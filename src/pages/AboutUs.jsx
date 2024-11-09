@@ -29,7 +29,8 @@ const AboutUs = () => {
                     allTeams.map(team => (
                         <div key={team.id} className='w-11/12 mx-auto bg-[#ECECEC] rounded-md p-6 space-y-4'>
                             <div>
-                                {team.image}
+                                {/* {team.image} */}
+                                <img className='w-3/5 mx-auto rounded-lg' src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" alt="" />
                             </div>
                             <div className='space-y-2'>
                                 <h3 className='text-lg font-bold text-center'>{team.name}</h3>
