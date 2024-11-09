@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useLoaderData, useParams } from 'react-router-dom';
 import ReactStars from "react-rating-stars-component";
 import { BsCart3 } from "react-icons/bs";
@@ -6,6 +6,7 @@ import { CiHeart } from "react-icons/ci";
 import { addToCart, addToWishList } from '../../../utilities/AddToDb';
 
 const ProductDetails = () => {
+    const [isAddedToWishList, setIsAddedToWishList] = useState(false);
 
     useEffect(() => {
         window.scrollTo(0, 100);
@@ -24,8 +25,8 @@ const ProductDetails = () => {
     }
 
     const handleAddToWishList = () => {
-        console.log("handleAddToWishList", id);
         addToWishList(id);
+        setIsAddedToWishList(true);
     }
 
 
@@ -70,11 +71,11 @@ const ProductDetails = () => {
 
                     <div className='flex items-center gap-4 pb-8'>
                         <button onClick={() => handleAddToCart(id)} className='flex items-center btn bg-[#9538E2] text-white text-sm font-medium rounded-[32px]'>
-                        Add To Card <BsCart3 />
+                            Add To Card <BsCart3 />
                         </button>
-                        <div onClick={() => handleAddToWishList(id)} className='flex justify-center items-center cursor-pointer w-12 h-12 bg-white rounded-full border border-[#dfdfe1]'>
-                    <CiHeart className='text-3xl' />
-                </div>
+                        <div onClick={() => handleAddToWishList(id)} className={`flex justify-center items-center hover:bg-gray-300 cursor-pointer w-12 h-12 bg-white rounded-full border border-[#dfdfe1] ${isAddedToWishList ? 'opacity-50 pointer-events-none' : ''}`}>
+                            <CiHeart className='text-3xl' />
+                        </div>
                     </div>
                 </div>
             </div>

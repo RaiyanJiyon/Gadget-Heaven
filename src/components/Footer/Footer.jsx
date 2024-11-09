@@ -14,23 +14,22 @@ const Footer = () => {
                 <div className='flex justify-between md:w-1/2 mx-auto'>
                     <nav className='flex flex-col text-[#09080F99]'>
                         <h6 className="text-[#09080F] text-lg font-bold">Services</h6>
-                        <a className="link link-hover">Branding</a>
-                        <a className="link link-hover">Design</a>
-                        <a className="link link-hover">Marketing</a>
-                        <a className="link link-hover">Advertisement</a>
+                        <a className="link link-hover text-sm pt-2">Product Support</a>
+                        <a className="link link-hover text-sm pt-2">Order Tracking</a>
+                        <a className="link link-hover text-sm pt-2">Shipping & Delivery</a>
+                        <a className="link link-hover text-sm pt-2">Returns</a>
                     </nav>
                     <nav className='flex flex-col text-[#09080F99]'>
                         <h6 className="text-[#09080F] text-lg font-bold">Company</h6>
-                        <a className="link link-hover">About us</a>
-                        <a className="link link-hover">Contact</a>
-                        <a className="link link-hover">Jobs</a>
-                        <a className="link link-hover">Press kit</a>
+                        <a className="link link-hover text-sm pt-2">About us</a>
+                        <a className="link link-hover text-sm pt-2">Careers</a>
+                        <a className="link link-hover text-sm pt-2">Contact</a>
                     </nav>
                     <nav className='flex flex-col text-[#09080F99]'>
                         <h6 className="text-[#09080F] text-lg font-bold">Legal</h6>
-                        <a className="link link-hover">Terms of use</a>
-                        <a className="link link-hover">Privacy policy</a>
-                        <a className="link link-hover">Cookie policy</a>
+                        <a className="link link-hover text-sm pt-2">Terms of Service</a>
+                        <a className="link link-hover text-sm pt-2">Privacy policy</a>
+                        <a className="link link-hover text-sm pt-2">Cookie Policy</a>
                     </nav>
                 </div>
             </div>

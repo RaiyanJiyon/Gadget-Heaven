@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import {
     ResponsiveContainer,
@@ -13,6 +13,10 @@ import {
 } from 'recharts';
 
 const Statistics = () => {
+    useEffect(() => {
+        document.title = "Statistics | Gadget Heaven";
+    }, []);
+    
     const allGadgets = useLoaderData();
 
     return (

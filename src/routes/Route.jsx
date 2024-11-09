@@ -16,6 +16,7 @@ import Wishlist from '../components/Wishlist/Wishlist';
 import Sidebar from '../components/Sidebar/Sidebar';
 import Gadgets from '../components/Gadgets/Gadgets';
 import ErrorPage from '../components/ErrorPage/ErrorPage';
+import AboutUs from '../pages/AboutUs';
 
 const router = createBrowserRouter([
     {
@@ -70,6 +71,11 @@ const router = createBrowserRouter([
                     },
                 ]
             },
+            {
+                path: "/about-us",
+                element: <AboutUs />,
+                loader: () => fetch('/teams.json')
+            }
         ]
     },
 ]);

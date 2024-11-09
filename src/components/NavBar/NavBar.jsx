@@ -5,7 +5,7 @@ import { CiHeart } from "react-icons/ci";
 
 const NavBar = () => {
     const location = useLocation();
-    const isHome = location.pathname === "/";
+    const isHome = location.pathname === "/" || location.pathname.startsWith("/home");
 
     return (
         <div className="w-11/12 2xl:w-3/4 mx-auto navbar mt-6">
@@ -31,6 +31,7 @@ const NavBar = () => {
                         <NavLink to={"/"} className={ ({isActive}) => isActive ? 'text-[#9538E2]' : (isHome ? 'text-white' : 'text-black') }>Home</NavLink>
                         <NavLink to={"/statistics"} className={ ({isActive}) => isActive ? 'text-[#9538E2]' : (isHome ? 'text-white' : 'text-black') }>Statistics</NavLink>
                         <NavLink to={"/dashboard"} className={ ({isActive}) => isActive ? 'text-[#9538E2]' : (isHome ? 'text-white' : 'text-black') }>Dashboard</NavLink>
+                        <NavLink to={"/about-us"} className={ ({isActive}) => isActive ? 'text-[#9538E2]' : (isHome ? 'text-white' : 'text-black') }>About Us</NavLink>
                     </ul>
                 </div>
                 <NavLink to={"/"} className={ (isHome) ? 'text-white btn btn-ghost text-xl' : 
@@ -41,6 +42,7 @@ const NavBar = () => {
                     <NavLink to={"/"} className={ ({isActive}) => isActive ? 'text-white underline underline-offset-4' : (isHome ? 'text-white' : 'text-black') }>Home</NavLink>
                     <NavLink to={"/statistics"} className={ ({isActive}) => isActive ? 'text-[#9538E2] underline underline-offset-4' : (isHome ? 'text-white' : 'text-black') }>Statistics</NavLink>
                     <NavLink to={"/dashboard"} className={ ({isActive}) => isActive ? 'text-[#9538E2] underline underline-offset-4' : (isHome ? 'text-white' : 'text-black') }>Dashboard</NavLink>
+                    <NavLink to={"/about-us"} className={ ({isActive}) => isActive ? 'text-[#9538E2] underline underline-offset-4' : (isHome ? 'text-white' : 'text-black') }>About Us</NavLink>
                 </ul>
             </div>
             <div className="navbar-end gap-4">

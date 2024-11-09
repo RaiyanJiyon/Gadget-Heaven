@@ -32,7 +32,7 @@ const Wishlist = () => {
                         <div className='w-1/5'>
                             <img className='w-48' src={wishList.product_image} alt={`${wishList.product_image} image`} />
                         </div>
-                        <div className='w-4/5'>
+                        <div className='w-4/5 space-y-2 p-4 md:p-0'>
                             <div className='flex justify-between text-xl font-bold'>
                                 {wishList.product_title}
                                 <TiDeleteOutline onClick={() => handleRemoveWishList(wishList.product_id)} className='text-red-400 text-3xl mr-16 cursor-pointer' />

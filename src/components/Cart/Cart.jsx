@@ -3,11 +3,13 @@ import { useLoaderData } from 'react-router-dom';
 import { getToCart, removeToCart } from '../../utilities/AddToDb';
 import { TiDeleteOutline } from "react-icons/ti";
 import Modal from '../Modal/Modal';
+import { PiSliders } from "react-icons/pi";
 
 const Cart = () => {
     const [cartList, setCartList] = useState([]);
     const [totalCost, setTotalCost] = useState(0);
     const [isModalOpen, setIsModalOpen] = useState(false);
+    const [isPurchaseOpen, setIsPurchaseOpen] = useState(false);
 
     const allCart = useLoaderData();
 
@@ -23,6 +25,12 @@ const Cart = () => {
         const total = filterCartList.reduce((acc, cartItem) => acc + cartItem.price, 0);
         setTotalCost(total);
 
+        if (filterCartList.length === 0) {
+            setIsPurchaseOpen(true);
+        } else {
+            setIsPurchaseOpen(false);
+        }
+
     }, [allCart]);
 
     const handleSortByPrice = () => {
@@ -34,11 +42,15 @@ const Cart = () => {
         setTotalCost(0);
         const total = cartList.reduce((acc, cartItem) => acc + cartItem.price, 0);
         setTotalCost(total);
-
         setCartList([]);
         localStorage.removeItem('cart-item');
-
         setIsModalOpen(true);
+        setIsPurchaseOpen(true);
+    };
+
+    const handleAddToCart = (item) => { 
+        setCartList(prevCartList => [...prevCartList, item]); 
+        setIsPurchaseOpen(false); // Re-enable the Purchase button
     };
 
     const handleRemoveToCart = (product_id) => {
@@ -48,6 +60,10 @@ const Cart = () => {
 
         const newTotal = updatedCartList.reduce((acc, cartItem) => acc + cartItem.price, 0);
         setTotalCost(newTotal);
+        
+        if (updatedCartList.length === 0) {
+            setIsPurchaseOpen(true);
+        }
     };
 
     return (
@@ -56,9 +72,17 @@ const Cart = () => {
                 <h2 className='text-xl font-bold'>Cart</h2>
                 <div className='flex justify-center items-center gap-4'>
                     <h2 className='text-xl font-bold'>Total cost: {totalCost}</h2>
-                    <button onClick={handleSortByPrice} className='btn btn-outline text-[#9538E2] font-semibold border border-[#9538E2] rounded-[32px]'>Sort by Price</button>
+                    <button onClick={handleSortByPrice} className='btn btn-outline text-[#9538E2] font-semibold border border-[#9538E2] rounded-[32px]'>
+                        Sort by Price <PiSliders className='text-lg' />
+                    </button>
                     <div>
-                        <button onClick={handlePurchaseProduct} className='btn bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold border-none rounded-[32px]'>Purchase</button>
+                        <button
+                            onClick={handlePurchaseProduct}
+                            className={`btn bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold border-none rounded-[32px] ${isPurchaseOpen ? 'opacity-50 pointer-events-none' : ''}`}
+                            disabled={isPurchaseOpen}
+                        >
+                            Purchase
+                        </button>
                         <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} totalCost={totalCost} />
                     </div>
                 </div>
@@ -71,7 +95,7 @@ const Cart = () => {
                             <div className='w-1/5'>
                                 <img className='w-48' src={cart.product_image} alt={`${cart.product_image} image`} />
                             </div>
-                            <div className='w-4/5'>
+                            <div className='w-4/5 space-y-2 p-4 md:p-0'>
                                 <div className='flex justify-between text-xl font-bold'>
                                     {cart.product_title}
                                     <TiDeleteOutline onClick={() => handleRemoveToCart(cart.product_id)} className='text-red-400 text-3xl mr-16 cursor-pointer' />
