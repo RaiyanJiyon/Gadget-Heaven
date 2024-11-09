@@ -7,21 +7,15 @@ const AboutUs = () => {
     }, []);
 
     const allTeams = useLoaderData();
-    console.log(allTeams);
 
     return (
-        <div className='bg-[#f7f7f7] pb-24'>
+        <div className='bg-[#f7f7f7] pb-16'>
             {/* heading div */}
             <div className='bg-[#9538E2] mb-10'>
                 <h2 className='text-2xl font-bold text-white pt-8 text-center'>Meet Our Beautiful Teams</h2>
                 <p className='w-1/2 mx-auto text-sm font-light text-white mt-2 text-center pb-10'>
                     At Gadget Heaven, we believe in the power of innovation. Our mission is to provide cutting-edge gadgets that enhance everyday life. We hire passionate individuals and equip them with the tools and support they need to excel. Together, we strive to deliver exceptional products and an unparalleled shopping experience for our customers.
                 </p>
-
-                {/* <div className="flex justify-center items-center w-[50%] gap-4 mx-auto pb-8">
-                    <NavLink to={"/dashboard/cart"} className={ ({isActive}) => isActive ? "btn bg-white text-[#9538E2] font-bold px-8 rounded-[32px]" : "btn btn-outline border border-white font-bold text-white rounded-[32px] px-8" }>Cart</NavLink>
-                    <NavLink to={"/dashboard/wishlist"} className={ ({isActive}) => isActive ? "btn bg-white text-[#9538E2] font-bold px-8 rounded-[32px]" : "btn btn-outline border border-white font-bold text-white rounded-[32px] px-8" }>Wishlist</NavLink>
-                </div> */}
             </div>
 
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-16'>

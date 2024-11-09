@@ -68,9 +68,9 @@ const Cart = () => {
 
     return (
         <div className='w-11/12 2xl:w-4/5 mx-auto mt-12'>
-            <div className='flex justify-between items-center'>
+            <div className='flex flex-col md:flex-row justify-between items-center'>
                 <h2 className='text-xl font-bold'>Cart</h2>
-                <div className='flex justify-center items-center gap-4'>
+                <div className='flex flex-col md:flex-row justify-center items-center gap-4'>
                     <h2 className='text-xl font-bold'>Total cost: {totalCost}</h2>
                     <button onClick={handleSortByPrice} className='btn btn-outline text-[#9538E2] font-semibold border border-[#9538E2] rounded-[32px]'>
                         Sort by Price <PiSliders className='text-lg' />
@@ -91,11 +91,11 @@ const Cart = () => {
             <div className='mt-8 space-y-6'>
                 {
                     cartList.map(cart => (
-                        <div key={cart.product_id} className='flex justify-between items-center gap-4 bg-white rounded-2xl'>
-                            <div className='w-1/5'>
+                        <div key={cart.product_id} className='flex flex-col md:flex-row justify-between items-center gap-4 bg-white rounded-2xl'>
+                            <div className='md:w-1/5'>
                                 <img className='w-48' src={cart.product_image} alt={`${cart.product_image} image`} />
                             </div>
-                            <div className='w-4/5 space-y-2 p-4 md:p-0'>
+                            <div className='md:w-4/5 space-y-2 p-4 md:p-0'>
                                 <div className='flex justify-between text-xl font-bold'>
                                     {cart.product_title}
                                     <TiDeleteOutline onClick={() => handleRemoveToCart(cart.product_id)} className='text-red-400 text-3xl mr-16 cursor-pointer' />

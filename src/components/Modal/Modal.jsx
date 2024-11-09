@@ -4,7 +4,6 @@ import { NavLink } from 'react-router-dom';
 
 const Modal = ({ isOpen, onClose, totalCost }) => {
     const modalRef = useRef();
-    console.log(totalCost);
 
     useEffect(() => {
         if (isOpen) {
