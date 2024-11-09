@@ -93,7 +93,7 @@ const Cart = () => {
                     cartList.map(cart => (
                         <div key={cart.product_id} className='flex flex-col md:flex-row justify-between items-center gap-4 bg-white rounded-2xl'>
                             <div className='md:w-1/5'>
-                                <img className='w-48' src={cart.product_image} alt={`${cart.product_image} image`} />
+                            <img className='w-48' src={`/images/${cart.product_image.split('/').pop()}`} alt={`${cart.product_image.split('/').pop()} image`} />
                             </div>
                             <div className='md:w-4/5 space-y-2 p-4 md:p-0'>
                                 <div className='flex justify-between text-xl font-bold'>
