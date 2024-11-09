@@ -20,7 +20,7 @@ const Statistics = () => {
     const allGadgets = useLoaderData();
 
     return (
-        <div className='bg-[#f7f7f7] pb-24'>
+        <div className='bg-[#f7f7f7] pb-20'>
             {/* heading div */}
             <div className='bg-[#9538E2]'>
                 <h2 className='text-2xl font-bold text-white pt-8 text-center'>Statistics</h2>
