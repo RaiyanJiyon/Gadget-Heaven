@@ -48,10 +48,6 @@ const Cart = () => {
         setIsPurchaseOpen(true);
     };
 
-    const handleAddToCart = (item) => { 
-        setCartList(prevCartList => [...prevCartList, item]); 
-        setIsPurchaseOpen(false); // Re-enable the Purchase button
-    };
 
     const handleRemoveToCart = (product_id) => {
         removeToCart(product_id);
