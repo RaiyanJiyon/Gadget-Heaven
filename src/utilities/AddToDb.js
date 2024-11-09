@@ -79,21 +79,6 @@ const getToWishList = () => {
 
 const addToWishList = (id) => {
     const storedList = getToWishList();
-    const storedCartList = getToCart();
-
-    if (storedCartList.includes(id)) {
-        toast.warn('This Product is already in your cart list, so it cannot be added to the Wishlist.', {
-            position: "top-center",
-            autoClose: 2000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: "light",
-        });
-        return
-    }
 
     if (storedList.includes(id)) {
         toast.error('Already in Wishlist', {
