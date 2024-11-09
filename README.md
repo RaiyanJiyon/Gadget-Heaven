@@ -8,7 +8,7 @@ Welcome to **GadgetHeaven**, a responsive e-commerce platform where users can ex
 Check out the live version of the project here: [GadgetHeaven Live](https://gadget-heaven2.netlify.app/)
 
 ## 📄 Requirement Document Link
-Access the complete project requirement document here: [Project Requirements]()
+Access the complete project requirement document here: [Project Requirements](/requirment-document.pdf)
 
 ## 🛠️ React Fundamentals Used in the Project
 This project incorporates several essential React concepts to build a fully functional e-commerce platform. Below are the key concepts used:

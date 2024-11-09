@@ -54,12 +54,12 @@ New Route/Page:
 Miscellaneous
 - Reloading the website should not show any error or 404 page. ✅
 - Add a 404 page. ✅
-- Provide documentation in the README.md file ❌
-  - Attach Live Website Link
-  - Attach Requirement Document Link
-  - List of React Fundamental concepts used in the project
-  - What you have used for handling and managing data (context API/local storage)
-  - 5 features of your website/project
+- Provide documentation in the README.md file ✅
+  - Attach Live Website Link ✅
+  - Attach Requirement Document Link ✅
+  - List of React Fundamental concepts used in the project ✅
+  - What you have used for handling and managing data (context API/local storage) ✅
+  - 5 features of your website/project ✅
 - Show toast on
   - Adding item to cart ✅
   - Adding item to wishlist ✅
