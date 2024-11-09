@@ -7,7 +7,6 @@ const Gadgets = () => {
     const gadgetsData = useLoaderData();
     const { category } = useParams();
 
-    // Filter gadgets based on the selected category or show all by default
     const filteredGadgets = !category || category === 'All Product' 
         ? gadgetsData 
         : gadgetsData.filter(gadget => gadget.category === category);
@@ -15,11 +14,11 @@ const Gadgets = () => {
     return (
         <div className='w-11/12 2xl:w-4/5 mx-auto mt-20 pb-20'>
             <h2 className='text-3xl font-bold text-center'>Explore Cutting-Edge Gadgets</h2>
-            <div className='grid grid-cols-4 gap-6 mt-10'>
-                <div className='col-span-1 bg-white flex flex-col border border-[#dfdfe2] rounded-2xl h-[550px]'>
+            <div className='grid md:grid-cols-4 gap-6 mt-10'>
+                <div className='md:col-span-1 bg-white flex flex-col border border-[#dfdfe2] rounded-2xl h-[550px]'>
                     <Sidebar />
                 </div>
-                <div className='col-span-3 grid grid-cols-1 md:grid-cols-3 gap-6'>
+                <div className='md:col-span-3 grid grid-cols-1 md:grid-cols-3 gap-6'>
                     {
                         filteredGadgets.map(gadget => (
                             <Gadget key={gadget.product_id} gadget={gadget} />
