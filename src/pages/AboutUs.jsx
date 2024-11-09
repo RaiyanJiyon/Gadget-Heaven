@@ -13,7 +13,7 @@ const AboutUs = () => {
             {/* heading div */}
             <div className='bg-[#9538E2] mb-10'>
                 <h2 className='text-2xl font-bold text-white pt-8 text-center'>Meet Our Beautiful Teams</h2>
-                <p className='md:w-1/2 mx-auto text-sm font-light text-white mt-2 text-center pb-10'>
+                <p className='w-11/12 md:w-1/2 mx-auto text-sm font-light text-white mt-2 text-center pb-10'>
                     At Gadget Heaven, we believe in the power of innovation. Our mission is to provide cutting-edge gadgets that enhance everyday life. We hire passionate individuals and equip them with the tools and support they need to excel. Together, we strive to deliver exceptional products and an unparalleled shopping experience for our customers.
                 </p>
             </div>

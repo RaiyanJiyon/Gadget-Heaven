@@ -7,8 +7,8 @@ const Gadgets = () => {
     const gadgetsData = useLoaderData();
     const { category } = useParams();
 
-    const filteredGadgets = !category || category === 'All Product' 
-        ? gadgetsData 
+    const filteredGadgets = !category || category === 'All Product'
+        ? gadgetsData
         : gadgetsData.filter(gadget => gadget.category === category);
 
     return (
