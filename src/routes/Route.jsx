@@ -13,6 +13,8 @@ import Iphone from '../components/Categories/Iphone/Iphone';
 import ProductDetails from '../components/Categories/ProductDetails/ProductDetails';
 import Cart from '../components/Cart/Cart';
 import Wishlist from '../components/Wishlist/Wishlist';
+import Sidebar from '../components/Sidebar/Sidebar';
+import Gadgets from '../components/Gadgets/Gadgets';
 
 const router = createBrowserRouter([
     {
@@ -24,6 +26,18 @@ const router = createBrowserRouter([
                 path: "/",
                 element: <Home />,
                 loader: () => fetch('/gadgets.json'),
+                children: [ 
+                    { 
+                    path: "/",
+                    element: <Gadgets />, 
+                    loader: () => fetch('/gadgets.json') 
+                }, 
+                    { 
+                        path: "/home/:category", 
+                        element: <Gadgets />, 
+                        loader: () => fetch('/gadgets.json') 
+                    } 
+                ]
             },
             {
                 path: "/product/:product_id",
