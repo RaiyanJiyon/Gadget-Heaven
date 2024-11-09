@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 const Gadget = ({ gadget }) => {
     const {product_id, product_title, product_image, price} = gadget;
     return (
-        <div className="card bg-base-100 shadow-lg">
+        <div className="card bg-base-100 shadow-lg h-[400px]">
             <figure className="px-4 pt-4">
                 <img
                     src={product_image}
